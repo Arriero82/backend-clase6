@@ -2,22 +2,34 @@ const express = require('express');
 
 const app = express();
 
+const Productos = require('./contenedor/Contenedor');
+
+const productos = new Productos('./productos.txt');
+
 const PORT = 8080;
 
-app.get('/', (request, response) => {
-    response.send(`<h1 style="color:blue">Bienvenidos al servidor express</h1>`)
+app.get('/productos', (req, res) => {
+    productos.getAll()
+    .then((data) => {
+        res.send(data)
+    })
+    .catch((error) => {
+        res.send([]);
+    })
 })
 
-let visitas = 0;
-app.get('/visitas', (request, response) => {
-    visitas++;
-    response.send(`Contador de visitas: ${visitas}`)
-})
-
-app.get('/fyh', (request, response) => {    
-    response.send({fyh: new Date().toLocaleString()})
+app.get('/prodRandom', (req, res) => {
+    productos.getRandom()
+    .then((data) => {
+        res.send(data)
+    })
+    .catch((error) => {
+        res.send([])
+    })
 })
 
 const server = app.listen(PORT, () => {
-    console.log(`Servidor escuchando por el puerto ${PORT}`);
+    console.log(`Se esta escuchando por el puerto ${PORT}`);
 })
+
+server.on('error', error => console.log(`Error en el servidor: ${error}`))  

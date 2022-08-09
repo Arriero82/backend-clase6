@@ -1,0 +1,6 @@
+[{"id":1659538053257,"title":"Corolla","price":50000,"thumbnail":"https://http2.mlstatic.com/D_NQ_NP_708035-MLA50207047549_062022-O.webp"},
+{"id":1659538433979,"title":"Nissan Cross","price":70000,"thumbnail":"https://http2.mlstatic.com/D_NQ_NP_957568-MLA50275538933_062022-O.webp"},
+{"id":1659538751508,"title":"Corolla Cross","price":70000,"thumbnail":"https://http2.mlstatic.com/D_NQ_NP_957568-MLA50275538933_062022-O.webp"},
+{"id":1659538969344,"title":"Cinderella Cross","price":70000,"thumbnail":"https://http2.mlstatic.com/D_NQ_NP_957568-MLA50275538933_062022-O.webp"},
+{"id":1659539010831,"title":"Carozo Crossy","price":70000,"thumbnail":"https://http2.mlstatic.com/D_NQ_NP_957568-MLA50275538933_062022-O.webp"}]  
+    
