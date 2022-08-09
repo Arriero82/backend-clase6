@@ -4,11 +4,11 @@ const app = express();
 
 const Productos = require('./contenedor/Contenedor');
 
-const productos = new Productos('./productos.txt');
+const productos = new Productos('./models.txt');
 
 const PORT = 8080;
 
-app.get('/productos', (req, res) => {
+app.get('/allModels', (req, res) => {
     productos.getAll()
     .then((data) => {
         res.send(data)
@@ -18,7 +18,7 @@ app.get('/productos', (req, res) => {
     })
 })
 
-app.get('/prodRandom', (req, res) => {
+app.get('/randomModel', (req, res) => {
     productos.getRandom()
     .then((data) => {
         res.send(data)

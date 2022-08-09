@@ -17,11 +17,9 @@ class Contenedor {
         try {
             let datos =await this.getAll()
             let jsonData = JSON.parse(datos);
-            let numRandom = Math.floor(Math.random()*jsonData.length)
-     
+            let numRandom = Math.floor(Math.random()*jsonData.length)     
             return jsonData[numRandom]
         } catch (error) {
-            console.log('no hay datos');
             return []
         }
         
